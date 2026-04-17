@@ -17,11 +17,13 @@ Guidance for managing day-to-day execution and tracking progress toward project 
   - Require at least one approval before merging (or team-defined policy)
 
 ## Quality & Testing
-- Unit tests for new logic
-- Integration tests where applicable
-- End-to-end smoke tests for critical flows before release
-- Security scanning in CI
-- Manual QA for feature acceptance when needed
+- Unit tests for new logic — owned by **Developers**
+- Integration tests where applicable — owned by **Developers** and **QA/Test Engineer**
+- End-to-end smoke tests for critical flows before release — owned by **QA/Test Engineer**
+- Security scanning in CI — findings triaged by **Security Lead** in partnership with Developers
+- Manual QA for feature acceptance — owned by **QA/Test Engineer**; sign-off required before items move to "Done"
+
+> The QA column on the project board represents work actively being validated by the QA/Test Engineer. Items in QA must not be counted as "Done" until the QA/Test Engineer confirms acceptance criteria are met.
 
 ## Reporting & Metrics
 - Track velocity and burndown
@@ -29,9 +31,9 @@ Guidance for managing day-to-day execution and tracking progress toward project 
 - Use dashboards for key signals (errors, latency, usage)
 
 ## Blocker Escalation
-- Level 1: Team-level triage in daily standup
-- Level 2: PM escalates to Product Lead and dependent teams
-- Level 3: Sponsor-level escalation for business-impacting issues
+- Level 1: Team-level triage in daily standup — **Developers** and **QA/Test Engineer** flag blockers; **Engineering Manager / Tech Lead** resolves technical blockers
+- Level 2: **PM** escalates to **Product Lead** and dependent teams; **Security Lead** engaged for security-related blockers; **Release Manager** notified if the blocker threatens a release window
+- Level 3: **Sponsor-level** escalation for business-impacting issues — **PM** escalates to **Stakeholder / Executive Sponsor** with impact summary and options
 
 ## Execution Checklist
 - [ ] Branching and PR conventions documented in repo
